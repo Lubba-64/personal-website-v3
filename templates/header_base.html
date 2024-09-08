@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block body %}
+<body class="bg-white w-full flex flex-col h-screen overflow-hidden">
+    <header>
+        <div
+            class="rounded-b-xl bg-mainprimary p-1 border-mainprimary border-b-4"
+        >
+            <div class="py-4 flex flex-wrap items-center text-center gap-4">
+                <p class="text-2xl text-maintertiary lora">
+                    Blair Hines (Lubba64)
+                </p>
+                <a href="/"
+                    ><p class="text-sm text-maintertiary lora">Home</p></a
+                >
+                <a href="/about"
+                    ><p class="text-sm text-maintertiary lora pr-4">About</p></a
+                >
+            </div>
+        </div>
+    </header>
+    <main class="flex-1 overflow-y-scroll">
+        {% block main %}{% endblock %}
+        <div class="w-full p-5"></div>
+    </main>
+    <footer class="bg-maintertiary"></footer>
+</body>
+{% endblock %}

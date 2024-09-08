@@ -1,0 +1,17 @@
+[
+    (
+        name: "instagram",
+        icon: "/public/instagram.svg",
+        link: "https://www.instagram.com/rebeccahinesspiritualdirection/",
+    ),
+    (
+        name: "facebook",
+        icon: "/public/facebook.svg",
+        link: "https://www.facebook.com/rebeccahinescoaching",
+    ),
+    (
+        name: "linkedin",
+        icon: "/public/linkedin.svg",
+        link: "https://www.linkedin.com/in/rebecca-calder-hines-60391314/",
+    ),
+]
