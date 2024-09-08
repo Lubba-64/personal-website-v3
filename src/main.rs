@@ -22,6 +22,18 @@ struct UnknownPage {
 
 }
 
+#[derive(Template)]
+#[template(path = "sound.html")]
+struct SoundPage {
+
+}
+
+#[derive(Template)]
+#[template(path = "about.html")]
+struct AboutPage {
+
+}
+
 #[tokio::main]
 async fn main() {
     dotenv().expect("expected dotenv");
@@ -37,6 +49,8 @@ async fn main() {
     let app = Router::new()
         .merge(memory_router)
         .route("/", get(show_main))
+        .route("/sound", get(show_sound))
+        .route("/about", get(show_about))
         .fallback(unknown_page)
         .layer(session_layer);
     let listener;
@@ -60,6 +74,26 @@ async fn main() {
 async fn show_main(session: Session) -> Html<String> {
     Html(
         MainPage {
+
+        }
+        .render()
+        .unwrap(),
+    )
+}
+
+async fn show_sound(session: Session) -> Html<String> {
+    Html(
+        SoundPage {
+
+        }
+        .render()
+        .unwrap(),
+    )
+}
+
+async fn show_about(session: Session) -> Html<String> {
+    Html(
+        AboutPage {
 
         }
         .render()
